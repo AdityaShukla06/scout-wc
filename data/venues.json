@@ -1,0 +1,190 @@
+[
+  {
+    "_id": "SOFI",
+    "name": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "USA",
+    "capacity": 70240,
+    "nearest_airports": [
+      { "code": "LAX", "name": "Los Angeles International", "distance_km": 5 },
+      { "code": "BUR", "name": "Hollywood Burbank", "distance_km": 32 }
+    ],
+    "public_transport": "Metro C Line to Inglewood/Downtown Landing station",
+    "hotel_areas": ["Downtown LA", "Inglewood", "El Segundo", "Santa Monica"],
+    "avg_hotel_price_usd": 220,
+    "fan_zone": "Hollywood Park adjacent to stadium",
+    "notes": "Largest World Cup venue. Book hotels 3+ months early — LA has limited affordable stock near the stadium."
+  },
+  {
+    "_id": "METLIFE",
+    "name": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "USA",
+    "capacity": 82500,
+    "nearest_airports": [
+      { "code": "EWR", "name": "Newark Liberty International", "distance_km": 16 },
+      { "code": "JFK", "name": "John F. Kennedy International", "distance_km": 38 }
+    ],
+    "public_transport": "NJ Transit train to Meadowlands Sports Complex station on match days only",
+    "hotel_areas": ["Midtown Manhattan", "Jersey City", "Newark", "Secaucus"],
+    "avg_hotel_price_usd": 280,
+    "fan_zone": "Times Square Fan Festival and MetLife plaza",
+    "notes": "Final venue. Stay in NYC and take NJ Transit — much better options than East Rutherford hotels."
+  },
+  {
+    "_id": "ATT",
+    "name": "AT&T Stadium",
+    "city": "Arlington",
+    "country": "USA",
+    "capacity": 80000,
+    "nearest_airports": [
+      { "code": "DFW", "name": "Dallas/Fort Worth International", "distance_km": 19 },
+      { "code": "DAL", "name": "Dallas Love Field", "distance_km": 26 }
+    ],
+    "public_transport": "Trinity Railway Express to CentrePort/DFW, then shuttle on match days",
+    "hotel_areas": ["Arlington", "Downtown Dallas", "Fort Worth", "Las Colinas"],
+    "avg_hotel_price_usd": 180,
+    "fan_zone": "AT&T Plaza and Six Flags area",
+    "notes": "Texas heat in June/July — expect 38–42°C. Stay hydrated. The stadium is fully air-conditioned indoors."
+  },
+  {
+    "_id": "ROSE",
+    "name": "Rose Bowl Stadium",
+    "city": "Pasadena",
+    "country": "USA",
+    "capacity": 92542,
+    "nearest_airports": [
+      { "code": "LAX", "name": "Los Angeles International", "distance_km": 45 },
+      { "code": "BUR", "name": "Hollywood Burbank", "distance_km": 16 }
+    ],
+    "public_transport": "Metro Gold Line to Memorial Park station, then shuttle",
+    "hotel_areas": ["Pasadena Old Town", "Arcadia", "Monrovia", "Downtown LA"],
+    "avg_hotel_price_usd": 195,
+    "fan_zone": "Rose Bowl parking lots and Pasadena Old Town",
+    "notes": "Second largest World Cup venue. Old Town Pasadena is the best pre-match area — excellent food and atmosphere within walking distance of the Metro."
+  },
+  {
+    "_id": "BCEM",
+    "name": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada",
+    "capacity": 54500,
+    "nearest_airports": [
+      { "code": "YVR", "name": "Vancouver International", "distance_km": 14 }
+    ],
+    "public_transport": "Canada Line SkyTrain to Stadium-Chinatown station — 5 min walk",
+    "hotel_areas": ["Downtown Vancouver", "Yaletown", "Gastown", "False Creek"],
+    "avg_hotel_price_usd": 210,
+    "fan_zone": "David Lam Park and Robson Square",
+    "notes": "Best-connected World Cup venue — SkyTrain runs directly from airport to the stadium. Downtown Vancouver hotels are excellent value vs US cities."
+  },
+  {
+    "_id": "AZTECA",
+    "name": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "capacity": 87523,
+    "nearest_airports": [
+      { "code": "MEX", "name": "Benito Juarez International", "distance_km": 21 },
+      { "code": "NLU", "name": "Felipe Angeles International", "distance_km": 48 }
+    ],
+    "public_transport": "Metro Line 2 to Tasqueña, then tram to Estadio Azteca",
+    "hotel_areas": ["Polanco", "Condesa", "Roma Norte", "Santa Fe"],
+    "avg_hotel_price_usd": 120,
+    "fan_zone": "Foro Sol adjacent complex and Zócalo Plaza",
+    "notes": "At 2,240m altitude — expect breathlessness for a day or two. Most affordable host city. Polanco neighbourhood is the safest and most tourist-friendly base."
+  },
+  {
+    "_id": "ESTADIO",
+    "name": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico",
+    "capacity": 49850,
+    "nearest_airports": [
+      { "code": "GDL", "name": "Miguel Hidalgo y Costilla International", "distance_km": 20 }
+    ],
+    "public_transport": "BRT Macrobús Line 1 to Estadio Akron",
+    "hotel_areas": ["Zapopan Centro", "Providencia", "Chapalita", "Plaza del Sol"],
+    "avg_hotel_price_usd": 100,
+    "fan_zone": "Andares Shopping Centre and Estadio plaza",
+    "notes": "Guadalajara is the tequila capital of Mexico — explore the centro histórico before or after matches. Very affordable compared to US venues."
+  },
+  {
+    "_id": "LUMEN",
+    "name": "Lumen Field",
+    "city": "Seattle",
+    "country": "USA",
+    "capacity": 72000,
+    "nearest_airports": [
+      { "code": "SEA", "name": "Seattle-Tacoma International", "distance_km": 23 }
+    ],
+    "public_transport": "Link Light Rail from Sea-Tac airport to Stadium station — direct",
+    "hotel_areas": ["Downtown Seattle", "Pioneer Square", "Capitol Hill", "Bellevue"],
+    "avg_hotel_price_usd": 200,
+    "fan_zone": "Occidental Square and CenturyLink Field plaza",
+    "notes": "June weather in Seattle is mild and often overcast — bring a light jacket. Pioneer Square neighbourhood is ideal for pre-match food and bars."
+  },
+  {
+    "_id": "LINCOLN",
+    "name": "Soldier Field",
+    "city": "Chicago",
+    "country": "USA",
+    "capacity": 61500,
+    "nearest_airports": [
+      { "code": "ORD", "name": "O'Hare International", "distance_km": 37 },
+      { "code": "MDW", "name": "Midway International", "distance_km": 18 }
+    ],
+    "public_transport": "CTA Red Line to Roosevelt, then bus 146 or 20 min walk along the lakefront",
+    "hotel_areas": ["The Loop", "South Loop", "River North", "Millennium Park area"],
+    "avg_hotel_price_usd": 190,
+    "fan_zone": "Grant Park and Museum Campus lakefront",
+    "notes": "Beautiful lakefront setting — arrive early to walk the Museum Campus. The Loop has excellent hotel options at reasonable prices for a major US city."
+  },
+  {
+    "_id": "HARD_ROCK",
+    "name": "Hard Rock Stadium",
+    "city": "Miami Gardens",
+    "country": "USA",
+    "capacity": 65326,
+    "nearest_airports": [
+      { "code": "MIA", "name": "Miami International", "distance_km": 18 },
+      { "code": "FLL", "name": "Fort Lauderdale-Hollywood International", "distance_km": 24 }
+    ],
+    "public_transport": "Tri-Rail to Miami Airport, then shuttle on match days",
+    "hotel_areas": ["South Beach", "Brickell", "Wynwood", "Coral Gables"],
+    "avg_hotel_price_usd": 245,
+    "fan_zone": "South Beach Fan Festival and stadium parking",
+    "notes": "Intense heat and humidity in June/July — 32–36°C with high humidity. Stay on South Beach for the full Miami experience; plan 45–60 min travel to stadium."
+  },
+  {
+    "_id": "EMPOWER",
+    "name": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "capacity": 76416,
+    "nearest_airports": [
+      { "code": "MCI", "name": "Kansas City International", "distance_km": 35 }
+    ],
+    "public_transport": "Match day shuttles from Union Station and Crown Center",
+    "hotel_areas": ["Downtown Kansas City", "Power & Light District", "Country Club Plaza"],
+    "avg_hotel_price_usd": 160,
+    "fan_zone": "Power & Light District and Crown Center",
+    "notes": "Most affordable US host city. Famous for BBQ — visit Joe's Kansas City or Q39 before the match. Power & Light District is lively on match nights."
+  },
+  {
+    "_id": "GILLETTE",
+    "name": "Gillette Stadium",
+    "city": "Foxborough",
+    "country": "USA",
+    "capacity": 65878,
+    "nearest_airports": [
+      { "code": "BOS", "name": "Boston Logan International", "distance_km": 43 },
+      { "code": "PVD", "name": "Providence T.F. Green", "distance_km": 32 }
+    ],
+    "public_transport": "Commuter Rail from South Station Boston to Foxboro on match days",
+    "hotel_areas": ["Boston Back Bay", "Downtown Boston", "Providence RI", "Foxborough local"],
+    "avg_hotel_price_usd": 230,
+    "fan_zone": "Patriot Place adjacent retail and dining complex",
+    "notes": "Stay in Boston and take the match day commuter rail — far better hotels and atmosphere. Patriot Place has good pre-match dining options right at the stadium."
+  }
+]
