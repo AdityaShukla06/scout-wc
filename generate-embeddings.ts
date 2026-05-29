@@ -4,7 +4,7 @@ import "dotenv/config";
 
 const uri = process.env.MONGODB_URI;
 if (!uri) {
-  console.error("❌  MONGODB_URI not found in .env");
+  console.error("  MONGODB_URI not found in .env");
   process.exit(1);
 }
 
@@ -13,7 +13,7 @@ const projectId = process.env.GOOGLE_CLOUD_PROJECT;
 const location = process.env.GOOGLE_CLOUD_LOCATION || "us-central1";
 
 if (!projectId) {
-  console.error("❌  GOOGLE_CLOUD_PROJECT not found in .env");
+  console.error("  GOOGLE_CLOUD_PROJECT not found in .env");
   process.exit(1);
 }
 
@@ -27,23 +27,23 @@ async function generateEmbeddings() {
 
   try {
     await client.connect();
-    console.log("✅  Connected to MongoDB Atlas");
+    console.log("  Connected to MongoDB Atlas");
 
     const db = client.db("scout");
     const teamsCollection = db.collection("teams");
 
     const teams = await teamsCollection.find({}).toArray();
-    console.log(`🔍  Found ${teams.length} teams. Generating embeddings...`);
+    console.log(`  Found ${teams.length} teams. Generating embeddings...`);
 
     let updatedCount = 0;
 
     for (const team of teams) {
       if (!team.style_description) {
-        console.warn(`⚠️   Team ${team.name} has no style_description. Skipping.`);
+        console.warn(`️   Team ${team.name} has no style_description. Skipping.`);
         continue;
       }
 
-      console.log(`⏳  Generating embedding for ${team.name}...`);
+      console.log(`  Generating embedding for ${team.name}...`);
       
       const response = await ai.models.embedContent({
         model: "text-embedding-004",
@@ -58,19 +58,19 @@ async function generateEmbeddings() {
           { $set: { embedding: embedding } }
         );
         updatedCount++;
-        console.log(`✅  Updated ${team.name} with ${embedding.length}-dimensional embedding.`);
+        console.log(`  Updated ${team.name} with ${embedding.length}-dimensional embedding.`);
       } else {
-        console.error(`❌  Failed to get embedding for ${team.name}`);
+        console.error(`  Failed to get embedding for ${team.name}`);
       }
       
       // Slight delay to avoid rate limits on free tier if applicable
       await new Promise(resolve => setTimeout(resolve, 200));
     }
 
-    console.log(`\n🎉  Finished! Successfully updated ${updatedCount} teams with embeddings.`);
+    console.log(`\n  Finished! Successfully updated ${updatedCount} teams with embeddings.`);
 
   } catch (err) {
-    console.error("❌  Error during embedding generation:", err);
+    console.error("  Error during embedding generation:", err);
   } finally {
     await client.close();
   }
