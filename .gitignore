@@ -1,11 +1,34 @@
+# Environments
 .env
 .env.*
+!.env.example
+
+# Node
 node_modules/
-.vscode/
-*.pem
-service-account-key.json
-.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Keys and Secrets
+*.pem
+*.key
+service-account-key.json
+
+# Test
 coverage/
+
+# Misc
+PROJECT_INFO.md
+scout-mcp/openapi-spec.yaml
+scout-mcp/system-instruction.txt
