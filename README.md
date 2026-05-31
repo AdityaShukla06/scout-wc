@@ -81,7 +81,7 @@ cd scout-frontend
 npm run dev
 ```
 
-The application will be available at http://localhost:3000.
+The application will be available at https://scout-frontend-864234998489.us-central1.run.app.
 
 ### Deployment
 
