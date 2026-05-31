@@ -254,10 +254,19 @@ app.get('/teams/similar-style', async (req, res) => {
         };
       }
       
-      const rawResults = await db.collection('teams')
+      let rawResults = await db.collection('teams')
         .find(queryObj, { projection: { embedding: 0 } })
         .limit(parseInt(limit) || 5)
         .toArray();
+
+      // If text search found nothing, return top ranked teams as a final fallback
+      if (!rawResults || rawResults.length === 0) {
+        rawResults = await db.collection('teams')
+          .find({}, { projection: { embedding: 0 } })
+          .sort({ fifa_rank: 1 })
+          .limit(parseInt(limit) || 5)
+          .toArray();
+      }
       
       results = rawResults.map(team => ({
         ...team,
@@ -280,7 +289,7 @@ app.get('/teams', async (req, res) => {
   try {
     if (!db) return res.status(500).json({ error: "Database not connected" });
     const teams = await db.collection('teams')
-      .find({}, { projection: { embedding: 0, _id: 1, name: 1, group: 1 } })
+      .find({}, { projection: { name: 1, group: 1 } })
       .sort({ name: 1 })
       .toArray();
     res.json({ count: teams.length, teams });
