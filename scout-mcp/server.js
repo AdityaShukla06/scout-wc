@@ -275,7 +275,22 @@ app.get('/teams/similar-style', async (req, res) => {
   }
 });
 
-// Endpoint 7: Calculate knockout stage path for a team
+// Endpoint 7: Get a list of all teams
+app.get('/teams', async (req, res) => {
+  try {
+    if (!db) return res.status(500).json({ error: "Database not connected" });
+    const teams = await db.collection('teams')
+      .find({}, { projection: { embedding: 0, _id: 1, name: 1, group: 1 } })
+      .sort({ name: 1 })
+      .toArray();
+    res.json({ count: teams.length, teams });
+  } catch (error) {
+    console.error("Error in /teams:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint 8: Calculate knockout stage path for a team
 app.get('/knockout-path/:teamId', async (req, res) => {
   try {
     if (!db) return res.status(500).json({ error: "Database not connected" });
